@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>PRODUCTS</title>
+</head>
+<body>
+    <header>
+        <h1>AWKS CLOTHING</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <!-- <a href="shoppingcart.html" id="cart-logo-link">
+                <img src="cart-icon.png" alt="Shopping Cart">
+                <span id="cart-count" data-count="0"></span>
+            </a> -->
+        </nav>
+    </header>
+
+    <main>
+        <h2>All Products</h2>
+        <section id="featured-products">
+            
+            <article class="product">
+                <img src="hoodie.jpg" width="300px" height="200px">
+                <h3>Super duper cool hoodie</h3>
+                <p>You're just not cut out to be a ninja.</p>
+                <p>Price: $2000</p>
+                <button type="button" onclick="addToCart('Super duper cool hoodie', 2000)">Add to cart</button>
+            </article>
+            <!-- Repeat above article block for each product -->
+            
+            <article class="product">
+                <img src="hoodie.jpg" width="300px" height="200px">
+                <h3>Super duper cool hoodie</h3>
+                <p>You're just not cut out to be a ninja.</p>
+                <p>Price: $2000</p>
+                <button onclick="addToCart('Super duper cool hoodie', 2000)">Add to cart</button>
+            </article>
+
+            <article class="product">
+                <img src="hoodie.jpg" width="300px" height="200px">
+                <h3>Super duper cool hoodie</h3>
+                <p>You're just not cut out to be a ninja.</p>
+                <p>Price: $2000</p>
+                <button onclick="addToCart('Super duper cool hoodie', 2000)">Add to cart</button>
+            </article>
+        </section>
+    </main>
+
+    <script src="cart.js"></script>
+
+    <footer>
+        <p>&copy; 2023 AWKS CLOTHING</p>
+    </footer>
+</body>
+</html>
