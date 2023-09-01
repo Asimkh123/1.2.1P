@@ -9,11 +9,9 @@ body {
     margin: 0;
 }
 
-
-
 header {
-    background-color: #293241; 
-    color: #fff; 
+    background-color: #293241;
+    color: #fff;
     display: flex;
     padding: 10px;
     position: fixed;
@@ -25,9 +23,12 @@ header {
 }
 
 header h1 {
-    margin: 0;
+    margin: 0 0 0 20px;
     font-size: 40px;
-    margin-left: 20px;
+}
+
+nav {
+    position: relative;
 }
 
 nav ul {
@@ -45,15 +46,62 @@ nav a {
     text-decoration: none;
 }
 
-/* Add margin to separate the navigation items */
 nav a:not(:last-child) {
     margin-bottom: 5px;
 }
 
-/* Change colors on hover */
 nav a:hover {
     background-color: #d07e12;
     color: #fff;
+}
+
+#menuList {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    display: none; 
+}
+
+#menuToggle:hover + #menuList,
+#menuList:hover {
+    display: block;
+}
+
+#menuToggle {
+    display: block;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#menuToggle:hover {
+    background-color: #d07e12;
+    color: #fff;
+}
+
+#desktopNav {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    #menuToggle {
+        display: none;
+    }
+
+    #desktopNav {
+        display: flex;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+    }
 }
 
 .container {
@@ -65,49 +113,46 @@ nav a:hover {
     padding: 20px;
 }
 
-.form-container {
+.form-container, .greeting-container {
     flex: 1;
     padding: 20px;
-    /* border: 1px solid #ccc; */
 }
 
 .greeting-container {
-    flex: 1;
-    padding: 20px;
     border: 1px solid #ccc;
-    background-color:#d07e12;
+    background-color: #d07e12;
 }
 
-/* Style for the form inputs */
 input[type="text"],
 input[type="date"],
 input[type="tel"],
 input[type="email"],
-textarea {
-    width: 100%;
+textarea,
+button {
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
     cursor: pointer;
 }
 
-/* Style for the greeting message */
+button:hover {
+    background-color: #d07e12;
+}
+
 #greetingMessage {
     font-size: 18px;
 }
 
 main {
-    padding-top: 90px;
-    padding-bottom: 100px;
+    padding: 90px 0;
 }
 
 main h2 {
@@ -121,7 +166,7 @@ main h2 {
 }
 
 .product {
-    background-color: #fff; /* White */
+    background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     padding: 20px;
@@ -138,100 +183,39 @@ main h2 {
     border-radius: 4px;
 }
 
-button {
-    background-color: #293241; /* Dark blue-grey */
-    color: #fff; /* White */
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
-
-/* Hover effect */
-button:hover {
-    background-color: #d07e12; /* Dark grey */
-}
-
-/* Click animation */
-@keyframes clickAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(0.9); }
-    100% { transform: scale(1); }
-}
-
-button:active {
-    animation: clickAnimation 0.3s;
-}
-
 footer {
-    background-color: #293241; /* Dark blue-grey */
-    color: #fff; /* White */
+    background-color: #293241;
+    color: #fff;
     text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
-    left: 0px;
-    right: 0px;
     width: 100%;
+}
+
+label, input[type="text"], input[type="email"], textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 form {
     max-width: 600px;
-    margin: 0 auto;
-    padding-bottom: 50px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
 }
 
-label {
+input[type="submit"] {
     display: block;
     margin-top: 20px;
 }
 
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-}
+/* Media Queries */
 
-input[type="submit"] {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    float: right;
-    bottom: 700px;
-}
-
-input[type="submit"],
-textarea {
-    margin-top: 10px;
-    border-radius: 2px;
-}
-
-/* Center-align the cart list */
-.cart-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Style for the delete button */
-.delete-button {
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/* Media queries for different screen sizes */
-
-/* Tablets */
 @media (max-width: 768px) {
     header h1 {
         font-size: 32px;
@@ -245,9 +229,21 @@ textarea {
     main {
         padding-top: 120px;
     }
+
+    nav ul {
+        display: block;
+    }
+
+    nav li {
+        list-style-type: none;
+        margin-bottom: 5px;
+    }
+
+    .product {
+        width: 100%;
+    }
 }
 
-/* Smartphones */
 @media (max-width: 480px) {
     header h1 {
         font-size: 28px;

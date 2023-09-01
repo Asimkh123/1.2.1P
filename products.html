@@ -8,15 +8,22 @@
 </head>
 <body>
     <header>
-        <h1>AWKS CLOTHING</h1>
+        <h1>PRODUCTS</h1>
         <nav>
-            <a href="home.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-            <!-- <a href="shoppingcart.html" id="cart-logo-link">
-                <img src="cart-icon.png" alt="Shopping Cart">
-                <span id="cart-count" data-count="0"></span>
-            </a> -->
+            <div id="menuToggle">
+                &#9776; <span id="currentPage"></span>
+            </div>
+            <ul id="menuList">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        
+            <div id="desktopNav">
+                <a href="home.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
 
@@ -31,7 +38,6 @@
                 <p>Price: $2000</p>
                 <button type="button" onclick="addToCart('Super duper cool hoodie', 2000)">Add to cart</button>
             </article>
-            <!-- Repeat above article block for each product -->
             
             <article class="product">
                 <img src="hoodie.jpg" width="300px" height="200px">

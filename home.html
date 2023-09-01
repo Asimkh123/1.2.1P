@@ -10,13 +10,20 @@
     <header>
         <h1>AWKS CLOTHING</h1>
         <nav>
-            <a href="home.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-            <a href="shoppingcart.html" id="cart-logo-link">
-                <img src="cart-icon.png" alt="Shopping Cart">
-                <span id="cart-count" data-count="0"></span>
-            </a>
+            <div id="menuToggle">
+                &#9776; <span id="currentPage"></span>
+            </div>
+            <ul id="menuList">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        
+            <div id="desktopNav">
+                <a href="home.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
 
@@ -54,41 +61,6 @@
                 <p id="greetingMessage"></p>
             </div>
         </div>
-
-        
-
-        <!-- <section id="featured-products">
-            
-            <article class="product">
-                <img src="hoodie.jpg" width="300px" height="200px">
-                <h3>Super duper cool hoodie</h3>
-                <p>You're just not cut out for it</p>
-                <p>Price: $2000</p>
-                <button onclick="addToCart('Super duper cool hoodie', 2000)">Add to cart</button>
-            </article> -->
-            <!-- Repeat above article block for each product -->
-
-            <!-- <article class="product">
-                <img src="hoodie.jpg" width="300px" height="200px">
-                <h3>Super duper cool Jakcet</h3>
-                <p>More leather than leather</p>
-                <p>Price: $2000</p>
-                <button onclick="addToCart('Super duper cool hoodie', 2000)">Add to cart</button>
-            </article>
-
-            <article class="product">
-                <img src="hoodie.jpg" width="300px" height="200px">
-                <h3>Super duper cool Jakcet</h3>
-                <p>More leather than leather</p>
-                <p>Price: $2000</p>
-                <button onclick="addToCart('Super duper cool hoodie', 2000)">Add to cart</button>
-            </article>
-            
-        </section>
-
-        <section id="shopping-items" class="shopping-list">
-            <h2>Shopping List</h2>
-        </section> -->
     </main>
 
     <script src="cart.js"></script>
